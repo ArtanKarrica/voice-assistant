@@ -1,0 +1,22 @@
+messages:
+  pressSpace: "Press and hold space to speak"
+  loadingModel: "Loading..."
+  noAudioInput: "Error: No sound input!"
+
+whisperRecognition:
+  modelPath: "base.en"
+  lang: "en"
+
+display:
+  width: 320
+  height: 240
+  font_size: 24
+
+
+ollama:
+  url: "http://localhost:11434/api/generate"
+  #model: "phi3"
+  model: "mistral:7b-instruct-v0.2-q4_K_S"
+
+conversation:
+  greeting: "Hi, how can I help you?"
