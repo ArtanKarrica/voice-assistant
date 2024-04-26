@@ -20,5 +20,5 @@ pyaudio
 pyttsx3
 whisper
 pyyaml
-langchain-community==0.1.5  # Assuming a version, adjust as needed
+langchain-community
 
