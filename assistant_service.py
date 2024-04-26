@@ -99,6 +99,7 @@ class Assistant:
         with open('assistant.yaml', encoding='utf-8') as data:
             configYaml = yaml.safe_load(data)
 
+        # Todo: check the Inst class
         config = Inst()
         config.messages = Inst()
         config.messages.loadingModel = configYaml["messages"]["loadingModel"]
@@ -154,8 +155,6 @@ class Assistant:
         self.display_text(response_text, font, TEXT_COLOR_CYAN, final_y + 20, WIDTH // 2)
 
         pygame.display.flip()
-
-
 
     def display_message(self, text):
         logging.info(f"Displaying message: {text}")
