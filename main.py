@@ -73,9 +73,17 @@ def handle_push_to_talk(assistant, conversation_chain):
     logging.info("Push-to-talk key pressed")
     waveform = assistant.waveform_from_mic()
     transcription = transcribe(waveform)
+
+    if not transcription.strip():  # Check if the transcription is empty or just whitespace
+        message = "Not able to capture any word. Please try again."
+        logging.info("No text captured in the transcription.")
+        assistant.display_rec_start(transcript_text=message)
+        return  # Exit the function if there's nothing to process
+
     display_transcription(transcription)
     response = conversation_chain.predict(input=transcription)
     display_response(response, assistant)
+
 
 def display_transcription(transcription):
     """Displays the transcription in the console."""
