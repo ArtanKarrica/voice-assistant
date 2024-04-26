@@ -106,13 +106,6 @@ class Assistant:
         config.messages.pressSpace = configYaml["messages"]["pressSpace"]
         config.messages.noAudioInput = configYaml["messages"]["noAudioInput"]
 
-        config.conversation = Inst()
-        config.conversation.greeting = configYaml["conversation"]["greeting"]
-
-        config.ollama = Inst()
-        config.ollama.url = configYaml["ollama"]["url"]
-        config.ollama.model = configYaml["ollama"]["model"]
-
         config.whisperRecognition = Inst()
         config.whisperRecognition.modelPath = configYaml["whisperRecognition"]["modelPath"]
         config.whisperRecognition.lang = configYaml["whisperRecognition"]["lang"]
